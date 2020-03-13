@@ -1,6 +1,6 @@
 ---
-layout: default
-title: All categories
+layout: post
+title: All tags
 ---
 
 <style>
@@ -25,7 +25,7 @@ ul.tag-box li span.size {
 
 ### Posts by tag
 <ul class="posts">
-  
+
 {% assign sorted_tags = (site.tags | sort:0) %}
 <ul class="tag-box">
 	{% for tag in sorted_tags %}
