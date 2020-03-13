@@ -24,7 +24,8 @@ ul.tag-box li span.size {
 
 
 ### Posts by tag
-
+<ul class="posts">
+  
 {% assign sorted_tags = (site.tags | sort:0) %}
 <ul class="tag-box">
 	{% for tag in sorted_tags %}
@@ -49,4 +50,6 @@ ul.tag-box li span.size {
 {% endfor %}
 </ul>
 {% endfor %}
+</ul>
+
 </ul>
