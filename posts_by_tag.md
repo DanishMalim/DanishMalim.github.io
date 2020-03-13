@@ -1,11 +1,25 @@
 ---
-layout: post
+layout: default
 title: Posts by Tag
 permalink: /tags/
 ---
-This page displays the site's tags in alphabetical order and shows how many posts there are per tag, makes anchor links for each tag, then outputs posts by tag in reverse chronological order. 
-
-### Posts by tag
+<style>
+	ul.tag-box li {
+  display: inline-block;
+  list-style: none;
+  list-style-image: none;
+  margin-bottom: 7px;
+}
+ul.tag-box li a {
+  background: #e6e6e6;
+  padding: 4px 8px;
+  border-radius: 3px;
+  color: #f76b48;
+}
+ul.tag-box li span.size {
+  font-weight: 300;
+}
+</style>
 
 {% assign sorted_tags = (site.tags | sort:0) %}
 <ul class="tag-box">
