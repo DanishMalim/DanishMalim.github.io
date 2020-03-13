@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Posts by Tag
 permalink: /tags/
 ---
