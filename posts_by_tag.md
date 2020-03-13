@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blogPageDefault
 title: Posts by Tags
 permalink: /tags/
 ---
