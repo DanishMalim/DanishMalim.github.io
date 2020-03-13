@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [blog]
+categories: [Tutorial]
 tags: [hot, summer]
 title: "Hank Quinlan, Horrible Cop, Launches Site"
 date: 2014-04-30
