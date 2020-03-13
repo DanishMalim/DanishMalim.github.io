@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Posts by Tag
+title: Posts by Tags
 permalink: /tags/
 ---
 <style>
@@ -21,6 +21,7 @@ ul.tag-box li span.size {
 }
 </style>
 
+<h3>All tags with counts</h3>
 {% assign sorted_tags = (site.tags | sort:0) %}
 <ul class="tag-box">
 	{% for tag in sorted_tags %}

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
+
+<style>
+nav ul, footer ul { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
+nav ul li, footer ul li { display: inline; margin-right: 20px; }
+</style>
   <head>
 
     {% if site.google_analytics %}
@@ -37,13 +42,13 @@
     <main id="content" class="main-content" role="main">
       
 <nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
+  <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/cv">CV</a></li>
+      <li><a href="/blog">Blog</a></li>
+  </ul>
+</nav>
 			<div class="container">
 			
 			{{ content }}
@@ -53,7 +58,7 @@
 	    		<ul>
 	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
 	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-</ul>
+          </ul>
       
       
       <footer class="site-footer">
