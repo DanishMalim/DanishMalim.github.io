@@ -20,24 +20,20 @@ ul.tag-box li span.size {
   font-weight: 300;
 }
 </style>
-	<h1>{{ page.title }}</h1>
 
 
-### Posts by tag
+<h1>{{ page.title }}</h1>
 
 
-
-
-
+<p>All the tags</p>
 <!--Below block will display tags in boxes sorted in order and with thier occurrence count-->
 {% assign sorted_tags = (site.tags | sort:0) %}
 <ul class="tag-box">
 	{% for tag in sorted_tags %}
-		{% assign t = tag | first %}
-		{% assign posts = tag | last %}
+    {% assign t = tag | first %}
+    {% assign posts = tag | last %}
     <!-- <li><a href="#{{ t | downcase }}">{{ t }} <span class="size">({{ posts.size }})</span></a></li> -->
-     <li><a href="{{site.baseurl}}/tags/">{{ t }} <span class="size">({{ posts.size }})</span></a></li>
-     <!-- <a href="{{site.baseurl}}/categories/">{{category}}</a> -->
+    <li><a href="{{site.baseurl}}/tags/">{{ t }} <span class="size">({{ posts.size }})</span></a></li>
 	{% endfor %}
 </ul> 
 
@@ -64,21 +60,13 @@ ul.tag-box li span.size {
 
 
 
-	<ul class="posts">
-	{% for category in site.categories %}
-  <h3>{{ category[0] }}</h3>
-  <ul>
-    {% for post in category[1] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
-
-		
-		
-		
-		
-		
-		
-
+<ul class="posts">
+  {% for category in site.categories %}
+    <h3>{{ category[0] }}</h3>
+    <ul>
+      {% for post in category[1] %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 </ul>
