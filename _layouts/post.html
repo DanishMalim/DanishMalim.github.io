@@ -5,7 +5,7 @@ layout: default
  
 
 
-
+<!-- Below div is used for lisiting categories added in each post at the top-->
 <div class="post-categories">
  <p> Categories:
   {% if post %}
@@ -18,6 +18,8 @@ layout: default
   {% unless forloop.last %}&nbsp;{% endunless %}
   {% endfor %} </p>
 </div>
+
+
 
 <p class="meta">{{ page.date | date_to_string }}</p>
 

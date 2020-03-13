@@ -25,15 +25,35 @@ ul.tag-box li span.size {
 
 ### Posts by tag
 
+<!-- Below div is used for lisiting tags added in each post at the top-->
+<div class="post-tags">
+  <p> Tags:
+   {% if post %}
+     {% assign tags = post.tags %}
+   {% else %}
+     {% assign tags = page.tags %}
+   {% endif %}
+   {% for tag in tags %}
+   <a href="{{site.baseurl}}/tags/">{{tag}}</a>
+   {% unless forloop.last %}&nbsp;{% endunless %}
+   {% endfor %} </p>
+ </div>
+
+
+ 
+<!-- 
 {% assign sorted_tags = (site.tags | sort:0) %}
 <ul class="tag-box">
 	{% for tag in sorted_tags %}
 		{% assign t = tag | first %}
 		{% assign posts = tag | last %}
     <li><a href="#{{ t | downcase }}">{{ t }} <span class="size">({{ posts.size }})</span></a></li>
-    <!-- <li><a href="/tags/index.html">{{ t }} <span class="size">({{ posts.size }})</span></a></ligit > -->
+     <li><a href="/tags/index.html">{{ t }} <span class="size">({{ posts.size }})</span></a></ligit >
 	{% endfor %}
-</ul>
+</ul>  -->
+
+
+
 
 <!-- {% for tag in sorted_tags %}
   {% assign t = tag | first %}
