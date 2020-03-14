@@ -55,7 +55,7 @@ layout: blogPageDefault
 
 
 <div class="rect">
-  <p>Related posts</p>
+  <p>Related posts.</p>
   {% assign maxRelated = 4 %}
   {% assign minCommonTags =  1 %}
   {% assign maxRelatedCounter = 0 %}
@@ -77,20 +77,26 @@ layout: blogPageDefault
       {% endif %}
     {% endfor %}
 
+
+
     {% if sameTagCount >= minCommonTags %}
 
           <a href="{{ site.baseurl }}{{ post.url }}">
               <div class="rel">
                   <h5>{{ post.title }}</h5>
-                  <img width="100%" src="/thumbs/{{post.image}}">
+                  <!-- <img width="100%" src="/thumbs/{{post.image}}"> -->
+                  <img width="100%" src="/thumbs/blogImage.png">
               </div>
           </a>
 
       {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-      {% if maxRelatedCounter >= maxRelated %}
-        {% break %}
-      {% endif %}
+        {% if maxRelatedCounter >= maxRelated %}
+          {% break %}
+        {% endif %}
     {% endif %}
   {% endfor %}
+  {% if sameTagCount < 1 %}
+  <p>No related posts found.</p>
+  {% endif %}
 </div>
 

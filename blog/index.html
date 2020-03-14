@@ -20,7 +20,6 @@ title: Hank Quinlan's Blog
 <ul class="post-list text-muted list-unstyled">
 
 <!-- Post limit removed-->
-<!-- {% for post in site.posts limit: maxposts %} -->
 {% for post in site.posts %}
   {% assign post_in_seconds = post.date | date: "%s" | plus: 0 %}
   {% assign recent_posts = "now" | date: "%s" | minus: timeframe %}
