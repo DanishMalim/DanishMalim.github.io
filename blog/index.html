@@ -13,8 +13,9 @@ title: Hank Quinlan's Blog
 
 		
 		
-{% assign timeframe = 2419200 %}
-{% assign maxposts = 10 %}
+<!-- {% assign timeframe = 2419200 %} -->
+{% assign timeframe = 120 %}
+{% assign maxposts = 2 %}
 {% assign date_format = site.minima.date_format | default: "%m/%d" %}
 
 <ul class="post-list text-muted list-unstyled">
@@ -26,8 +27,7 @@ title: Hank Quinlan's Blog
 
   {% if post_in_seconds > recent_posts %}
   {% capture label_new %}<span class="label label-primary">new</span>{% endcapture %}
-    <!-- {% if post.last_modified_at > post.date %} -->
-    {% if post.modified > post.date %}
+    {% if post.last_modified_at > post.date %}
       {% assign label_new = '' %}{% comment %}Clear NEW if modified{% endcomment %}
       {% capture label_updated %}<span class="label label-info">Updated <span class="badge">{{ post_updated }}</span></span>{% endcapture %}
     {% endif %}
