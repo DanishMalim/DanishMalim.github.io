@@ -19,9 +19,9 @@ title: Hank Quinlan's Blog
 
 <ul class="post-list text-muted list-unstyled">
 {% for post in site.posts limit: maxposts %}
-  {% assign post_in_seconds = post.last_modified_at | date: "%s" | plus: 0 %}
+  {% assign post_in_seconds = post.date | date: "%s" | plus: 0 %}
   {% assign recent_posts = "now" | date: "%s" | minus: timeframe %}
-  {% assign post_updated = post.last_modified_at | date: date_format %}
+  {% assign post_updated = post.date | date: date_format %}
   {% capture post_date %}<small>{{ post.date | date: date_format }}</small>{% endcapture %}
 
   {% if post_in_seconds > recent_posts %}
