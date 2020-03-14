@@ -14,11 +14,14 @@ title: Hank Quinlan's Blog
 		
 		
 {% assign timeframe = 2419200 %}
-{% assign maxposts = 10 %}
+{% assign maxposts = 2 %}<!-- Limit is removed as shown below-->
 {% assign date_format = site.minima.date_format | default: "%m/%d" %}
 
 <ul class="post-list text-muted list-unstyled">
-{% for post in site.posts limit: maxposts %}
+
+<!-- Post limit removed-->
+<!-- {% for post in site.posts limit: maxposts %} -->
+{% for post in site.posts %}
   {% assign post_in_seconds = post.date | date: "%s" | plus: 0 %}
   {% assign recent_posts = "now" | date: "%s" | minus: timeframe %}
   {% assign post_updated = post.date | date: date_format %}
