@@ -80,11 +80,15 @@ nav ul li, footer ul li { display: inline; margin-right: 20px; }
 			
 			</div><!-- /.container -->
 			<footer>
-          <h2>Contact: </h2>
-	    		<ul>
+        <h3>Contact info:</h3>
+        {% include social-media-links.html %} 
+        <p class="small">&copy; {{ site.time | date: '%Y' }}
+          {% assign site_name = site.name | default: site.title | append: '.' %}  All rights reserved.
+        </p>
+	    		<!-- <ul>
 	        		<li><a href="mailto:danishmlm4114@gmail.com">email</a></li>
 	        		<li><a href="https://github.com/danishmalim">github.com/danishmalim</a></li>
-          </ul>
+          </ul> -->
       
       
       <footer class="site-footer">
