@@ -1,2 +1,5 @@
 theme: jekyll-theme-cayman
 permalink: /blog/:year/:month/:day/:title
+plugins: 
+  - jekyll-sitemap
+plugins: [jekyll-paginate, jekyll-seo-tag]
