@@ -1,6 +1,5 @@
 
 # Author details.
-danish_malim:
-        name: Danish Malim
-        email: danishmlm4114@gmail.com
-        web:
+author:
+  name: 'Danish Malim'
+  web: 'danishmlm4114@gmail.com
