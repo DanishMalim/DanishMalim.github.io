@@ -100,29 +100,56 @@ author: danish
 </div>
 
 
-
-{% if site.data.social-media %}
+<!--
+{% if site.data.authors %}
 <div id="authors">
-    {% assign sm = site.data.authors %}
-    {% for entry in site.data.authors %}
-    {% assign key = entry | first %}
-        {% if sm[key].id %}
-	    <p> Written by:
-            <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}" rel="me">{{ sm[key].title }}</a>
-    {% endif %}
-    {% endfor %}
+{% assign sm = site.data.authors %}
+	{% for entry in site.data.authors %}
+		{% assign key = entry | first %}
+		{% if sm[key].id %}
+			<a href="{{ sm[key].href }}" title="{{ sm[key].title }}" rel="me">{{ sm[key].title }}</a>
+		{% endif %}
+	{% endfor %}
 </div>
 {% endif %}
-
+-->
 
 
 <style>
 	ul#horList li {display:inline; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: bold;}
+	.avatar {
+	  vertical-align: middle;
+	  width: 50px;
+	  height: 50px;
+	  border-radius: 50%;
+	}
+
 </style>
 
 <div id="PostInfo">
 	<div class="table">
 		<ul id="horList">
+
+		<li>
+		<img src="/thumbs/gravatar.png" alt="Avatar" class="avatar">
+		</li>
+		<li>
+		{% if site.data.authors %}
+		<div id="authors">
+		{% assign sm = site.data.authors %}
+			{% for entry in site.data.authors %}
+				{% assign key = entry | first %}
+				{% if sm[key].id %}
+					<a href="{{ sm[key].href }}" title="{{ sm[key].title }}" rel="me">{{ sm[key].title }}</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+		{% endif %}
+		</li>
+			<li>&nbsp</li>
+			<li>&nbsp</li>
+
+
 		  <li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>
 			<li class="meta">{{ page.date | date_to_string }}</li>
 			<li>&nbsp</li>
