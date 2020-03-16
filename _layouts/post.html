@@ -107,7 +107,8 @@ author: danish
     {% for entry in site.data.authors %}
     {% assign key = entry | first %}
         {% if sm[key].id %}
-            <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}" rel="me"><i class="fa {{ sm[key].fa-icon }} fa-3x"></i></a>
+	    <p> Written by:
+            <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}" rel="me">{{ sm[key].title }}</a>
     {% endif %}
     {% endfor %}
 </div>
