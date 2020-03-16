@@ -13,6 +13,8 @@ This is new modification.
 
 Use <code>&lt;div&gt;</code> tags
 <code>echo `uname -a`</code>
+
+<pre>
 <code>
 #include <iostream>
 using namespace std;
@@ -25,3 +27,4 @@ int main(){
 return 0;
 }
 <code>
+</pre>
