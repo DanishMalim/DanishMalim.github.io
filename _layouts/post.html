@@ -98,9 +98,16 @@ layout: blogPageDefault
   {% endfor %} </p>
 </div>
 
+<style>
+  ul#PostInfo li {  display: inline;  font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: bold; }  
+</style>
+<ul id="PostInfo">
+  <li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>
+  <li class="meta">{{ page.date | date_to_string }}</li>
+  <li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>
+</ul>
 
 
-<p class="meta">{{ page.date | date_to_string }}</p>
 
 <div class="post">
   {{ content }}
