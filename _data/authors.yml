@@ -1,5 +1,8 @@
 
 # Author details.
+
 danish:
-  name: 'Danish Malim'
-  web: 'danishmlm4114@gmail.com
+  id: 'danishmlm4114@gmail.com'
+  href: 'danishmlm4114@gmail.com'
+  title: 'Danish Malim'
+  fa-icon: 'fa-envelope-square'
