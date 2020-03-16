@@ -101,7 +101,6 @@ layout: blogPageDefault
 
 <style>
 	ul#horList li {display:inline; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: bold;}
-	.EmptyListEle {padding:10}
 </style>
 
 <div id="PostInfo">
@@ -109,15 +108,19 @@ layout: blogPageDefault
 		<ul id="horList">
 		  <li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>
 			<li class="meta">{{ page.date | date_to_string }}</li>
-			<li class="EmptyListEle"></li>
+			<li>&nbsp</li>
+			<li>&nbsp</li>
+
 				
 		  <li><i class="fa fa-clock-o" aria-hidden="true"></i></li>
 			<li>item3</li>
-			<li class="EmptyListEle"></li>
+			<li>&nbsp</li>
+			<li>&nbsp</li>
 			
 			<li><i class="fa fa-book" aria-hidden="true"></i></li>
 			<li>item4</li>
-			<li class="EmptyListEle"></li>
+			<li>&nbsp</li>
+			<li>&nbsp</li>
 		</ul>
 	</div>
 </div>
