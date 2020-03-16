@@ -14,8 +14,8 @@ This is new modification.
 Use <code>&lt;div&gt;</code> tags
 <code>echo `uname -a`</code>
 
-<pre><code>
-#include &lt;iostream&gt;
+```C++
+#include <iostream>
 using namespace std;
 int main(){
 	string str1="Hello";
@@ -25,4 +25,4 @@ int main(){
 	cout<<"Str3 = "<<str3<<endl;
 return 0;
 }
-<code></pre>
+```
