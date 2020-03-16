@@ -9,3 +9,8 @@ description: This is to demonstrate sample description
 
 THis is new post.
 This is new modification.
+
+
+Use <code>&lt;div&gt;</code> tags
+<code>echo `uname -a`</code>
+
