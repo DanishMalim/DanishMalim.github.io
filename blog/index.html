@@ -5,36 +5,73 @@ title: Danish Malim's Blog
 	<h1>{{ page.title }}</h1>
 	<ul class="posts">
 
+{% if paginator.total_pages > 1 %}
 
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <p class="author">
-    <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-  </p>
-<!--  <div class="content">
-    {{ post.content }}
-  </div> -->
-{% endfor %}
+  {% assign start = paginator.page | minus: 2 %}
+  {% assign end = paginator.page | plus: 2 %}
 
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      Previous
-    </a>
-  {% else %}
-    <span class="previous">Previous</span>
+  {% if start < 1 %}
+    {% assign start = 1 %}
+    {% assign end = start | plus: 4 %}
+  {% elsif end > paginator.total_pages %}
+    {% assign start = paginator.total_pages | minus: 4 %}
+    {% assign end = paginator.total_pages %}
   {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
+
+  {% if start < 1 %}
+    {% assign start = 1 %}
   {% endif %}
-</div>
+
+  {% if end > paginator.total_pages %}
+    {% assign end = paginator.total_pages %}
+  {% endif %}
+
+  <div class="pagination-wrapper">
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a class="pagination-step" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+          Newer
+        </a>
+      {% else %}
+        <span class="pagination-step">
+          Newer
+        </span>
+      {% endif %}
+
+      {% if start > 1 %}
+        <a class="pagination-first" href="{{ site.baseurl }}/">1</a>
+        <span class="pagination-more">&middot;&middot;&middot;</span>
+      {% endif %}
+
+      {% for page in (start..end) %}
+        {% if page == paginator.page %}
+          <span class="active">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="{{ site.baseurl }}/">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.baseurl }}/page-{{ page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if end < paginator.total_pages %}
+        <span class="pagination-more">&middot;&middot;&middot;</span>
+        <a class="pagination-last" href="{{ site.baseurl }}/page-{{ paginator.total_pages }}">{{ paginator.total_pages }}</a>
+      {% endif %}
+
+      {% if paginator.next_page %}
+        <a class="pagination-step" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+          Older
+        </a>
+      {% else %}
+        <span class="pagination-step">
+          Older
+        </span>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+
 
 
 <style>
