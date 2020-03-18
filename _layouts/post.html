@@ -139,6 +139,7 @@ author: danish
   <img src="/thumbs/img_avatar.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
   <div class="media-body">
     <h4>
+	Written by 
 		{% if site.data.authors %}
 		<!--<div id="authors"> -->
 		{% assign sm = site.data.authors %}
@@ -150,9 +151,20 @@ author: danish
 			{% endfor %}
 		<!--</div> -->
 		{% endif %}
-	 <small><i>Posted on {{ page.date | date_to_string }}</i></small>
 	</h4>
-    <p>Lorem ipsum...</p>
+	<p>
+	<ul id="horList">
+		<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>
+		<li class="meta">{{ page.date | date_to_string }}</li>
+		<li>&nbsp</li>
+		<li>&nbsp</li>
+
+		<li><i class="fa fa-clock-o" aria-hidden="true"></i></li>
+		<li>{% include read_time.html %} read</li>
+		<li>&nbsp</li>
+		<li>&nbsp</li>
+	</ul>
+	</p>
   </div>
 </div>
 
