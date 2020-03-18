@@ -48,3 +48,20 @@ ul.tag-box li span.size {
 {% endfor %}
 
 <!-- Listing posts by tag template from http://github.com/cagrimmett/jekyll-tools -->
+<!-- AddToAny BEGIN -->
+<h2>Share :</h2>
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_email"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_gmail"></a>
+<a class="a2a_button_telegram"></a>
+<a class="a2a_button_blogger"></a>
+<a class="a2a_button_google_bookmarks"></a>
+<a class="a2a_button_evernote"></a>
+<a class="a2a_button_linkedin"></a>
+<br><br>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
