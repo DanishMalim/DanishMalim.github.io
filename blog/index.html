@@ -6,9 +6,15 @@ title: Danish Malim's Blog
 	<ul class="posts">
 
 
-<!-- post list -->
+<!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-<li><a href="{{post.url | prepend: site.baseurl}}"><h3>{{post.title}}</h3></a></li>
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <p class="author">
+    <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+  </p>
+<!--  <div class="content">
+    {{ post.content }}
+  </div> -->
 {% endfor %}
 
 
@@ -25,7 +31,7 @@ title: Danish Malim's Blog
     {% if page == paginator.page %}
       <span class="webjeda">{{ page }}</span>
     {% elsif page == 1 %}
-      <a href="/">{{ page }}</a>
+      <a href="/blog"></a>
     {% else %}
       <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
