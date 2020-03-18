@@ -169,55 +169,6 @@ author: danish
 </div>
 
 
-
-
-
-	<ul id="authorList">
-		<li>
-		<img src="/thumbs/img_avatar.png" alt="avatar" class="avatar">
-		</li>
-		<li>
-		{% if site.data.authors %}
-		<!--<div id="authors"> -->
-		{% assign sm = site.data.authors %}
-			{% for entry in site.data.authors %}
-				{% assign key = entry | first %}
-				{% if sm[key].id %}
-					<a href="{{ sm[key].href }}" title="{{ sm[key].title }}" rel="me">{{ sm[key].title }}</a>
-				{% endif %}
-			{% endfor %}
-		<!--</div> -->
-		{% endif %}
-		</li>
-	</ul>
-
-<div id="PostInfo">
-	<div class="table">
-		<ul id="horList">
-
-
-			<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>
-			<li class="meta">{{ page.date | date_to_string }}</li>
-			<li>&nbsp</li>
-			<li>&nbsp</li>
-
-				
-			<li><i class="fa fa-clock-o" aria-hidden="true"></i></li>
-			<li>{% include read_time.html %} read</li>
-			<li>&nbsp</li>
-			<li>&nbsp</li>
-			
-		<!--	<li><i class="fa fa-book" aria-hidden="true"></i></li>
-			<li>item4</li>
-			<li>&nbsp</li>
-			<li>&nbsp</li> -->
-		</ul>
-	</div>
-</div>
-
-
-
-
 <div class="post">
   {{ content }}
 </div>
