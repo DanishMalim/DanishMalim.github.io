@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <style>
-#social-media:hover {
+i:hover {
   background-color: yellow;
 }
 
@@ -14,7 +14,7 @@
     {% assign key = entry | first %}
         {% if sm[key].id %}
             <!-- <p>"{{ sm[key].title }}" </p> -->
-            <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}" rel="me"><i class="fa {{ sm[key].fa-icon }} fa-3x"></i></a>
+            <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}" rel="me"><i class="fa {{ sm[key].fa-icon }} fa-3x" class="highlight"></i></a>
     {% endif %}
     {% endfor %}
 </div>
