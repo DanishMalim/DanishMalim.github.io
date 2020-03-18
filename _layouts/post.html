@@ -134,37 +134,37 @@ author: danish
 
 
 
-<!-- Bootstrap Media bar -->
-<div class="media border p-3">
-  <img src="/thumbs/img_avatar.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-  <div class="media-body">
-    <h4>
-	Written by 
-		{% if site.data.authors %}
-		<!--<div id="authors"> -->
-		{% assign sm = site.data.authors %}
-			{% for entry in site.data.authors %}
-				{% assign key = entry | first %}
-				{% if sm[key].id %}
-					<a href="{{ sm[key].href }}" title="{{ sm[key].title }}" rel="me">{{ sm[key].title }}</a>
-				{% endif %}
-			{% endfor %}
-		<!--</div> -->
-		{% endif %}
-	</h4>
-	<ul id="horList">
-		<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>
-		<li class="meta">{{ page.date | date_to_string }}</li>
-		<li>&nbsp</li>
-		<li>&nbsp</li>
+<!--<!-- Bootstrap Media bar -->-->
+<!--<div class="media border p-3">-->
+<!--  <img src="/thumbs/img_avatar.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">-->
+<!--  <div class="media-body">-->
+<!--    <h4>-->
+<!--	Written by -->
+<!--		{% if site.data.authors %}-->
+<!--		<!--<div id="authors"> -->-->
+<!--		{% assign sm = site.data.authors %}-->
+<!--			{% for entry in site.data.authors %}-->
+<!--				{% assign key = entry | first %}-->
+<!--				{% if sm[key].id %}-->
+<!--					<a href="{{ sm[key].href }}" title="{{ sm[key].title }}" rel="me">{{ sm[key].title }}</a>-->
+<!--				{% endif %}-->
+<!--			{% endfor %}-->
+<!--		<!--</div> -->-->
+<!--		{% endif %}-->
+<!--	</h4>-->
+<!--	<ul id="horList">-->
+<!--		<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>-->
+<!--		<li class="meta">{{ page.date | date_to_string }}</li>-->
+<!--		<li>&nbsp</li>-->
+<!--		<li>&nbsp</li>-->
 
-		<li><i class="fa fa-clock-o" aria-hidden="true"></i></li>
-		<li>{% include read_time.html %} read</li>
-		<li>&nbsp</li>
-		<li>&nbsp</li>
-	</ul>
-  </div>
-</div>
+<!--		<li><i class="fa fa-clock-o" aria-hidden="true"></i></li>-->
+<!--		<li>{% include read_time.html %} read</li>-->
+<!--		<li>&nbsp</li>-->
+<!--		<li>&nbsp</li>-->
+<!--	</ul>-->
+<!--  </div>-->
+<!--</div>-->
 
 
 <div class="post">
