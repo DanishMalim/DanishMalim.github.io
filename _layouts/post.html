@@ -131,6 +131,35 @@ author: danish
 
 
 
+
+
+
+<!-- Bootstrap Media bar -->
+<div class="media border p-3">
+  <img src="/thumbs/img_avatar.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+  <div class="media-body">
+    <h4>
+		{% if site.data.authors %}
+		<!--<div id="authors"> -->
+		{% assign sm = site.data.authors %}
+			{% for entry in site.data.authors %}
+				{% assign key = entry | first %}
+				{% if sm[key].id %}
+					<a href="{{ sm[key].href }}" title="{{ sm[key].title }}" rel="me">{{ sm[key].title }}</a>
+				{% endif %}
+			{% endfor %}
+		<!--</div> -->
+		{% endif %}
+	 <small><i>Posted on {{ page.date | date_to_string }}</i></small>
+	</h4>
+    <p>Lorem ipsum...</p>
+  </div>
+</div>
+
+
+
+
+
 	<ul id="authorList">
 		<li>
 		<img src="/thumbs/img_avatar.png" alt="avatar" class="avatar">
