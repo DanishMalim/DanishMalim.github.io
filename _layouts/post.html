@@ -124,14 +124,16 @@ author: danish
 	  border-radius: 50%;
 	}
 
+
+	ul#authorList li {display:inline; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: bold;}
+
 </style>
 
-<div id="PostInfo">
-	<div class="table">
-		<ul id="horList">
 
+
+	<ul id="authorList">
 		<li>
-		<img src="/thumbs/img_avatar.png" alt="Avatar" class="avatar">
+		<img src="/thumbs/img_avatar.png" alt="avatar" class="avatar">
 		</li>
 		<li>
 		{% if site.data.authors %}
@@ -146,8 +148,11 @@ author: danish
 		<!--</div> -->
 		{% endif %}
 		</li>
-			<li>&nbsp</li>
-			<li>&nbsp</li>
+	</ul>
+
+<div id="PostInfo">
+	<div class="table">
+		<ul id="horList">
 
 
 			<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>
