@@ -116,7 +116,7 @@ author: danish
 
 
 <style>
-	ul#horList li {display:inline; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: bold;}
+	ul#horList li {display:inline; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-weight: bold; font-size: small;}
 	.avatar {
 	  vertical-align: middle;
 	  width: 50px;
@@ -138,7 +138,7 @@ author: danish
 <div class="media border p-3">
   <img src="/thumbs/img_avatar.png" alt="Danish Malim" class="mr-3 mt-3 rounded-circle" style="width:60px;">
   <div class="media-body ">
-    <h4>
+    <h5>
 	Written by 
 		{% if site.data.authors %}
 		<!--<div id="authors"> -->
@@ -151,7 +151,7 @@ author: danish
 			{% endfor %}
 		<!--</div> -->
 		{% endif %}
-	</h4>
+	</h5>
 	<ul id="horList">
 		<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i></li>
 		<li class="meta">{{ page.date | date_to_string }}</li>
