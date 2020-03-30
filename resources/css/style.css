@@ -1,0 +1,112 @@
+/* html{
+    font-size:20px; /* Can be changed later*
+} */
+
+/* This will add image to complete banner tag*/
+.jumbotron{
+	background-image: linear-gradient(rgba(173, 169, 169, 0.5), rgba(24, 4, 4, 0.308)), url("../images/pattern3.png");
+	background-size:cover; /* To reduce the the size of the image*/
+	background-position:centre; /*alignment of image*/
+	background-attachment: fixed;
+	height: 100vh;	
+	margin-bottom: 0rem  !important; 
+    margin-right: 0rem  !important; 
+    color: whitesmoke;	
+}
+
+
+.jumbotron h1{
+
+    font-size: 50px;
+
+
+}
+.navbar{
+    background: linear-gradient(rgba(177, 176, 176, 0.103),rgba(0, 0, 0, 0.425));
+}
+
+.navbar a{
+color: #C8D6E5 !important; 
+font-size: 120%;
+margin-right: 30px;
+
+}
+.navbar i{
+    margin-right: 5px;
+}
+
+.navbar li a:hover{
+    /* color:#00D2D3 !important;  */
+    color:white !important; 
+    /* color:orange!important;  */
+}
+#NavBarToggler{
+    color: #C8D6E5;
+    font-size: 120%;
+}
+
+
+
+
+/*Section1 styling*/
+
+/* ------------------------------
+First section styling 
+---------------------------------
+*/
+#Section1 {
+	/* background-image: linear-gradient(rgba(252, 252, 252, 0.719), rgba(252, 246, 246, 0.945)),url("../images/pattern4.png");	 */
+	background-size:cover; /* To reduce the the size of the image*/
+	background-position:center; /*alignment of image*/
+	background-attachment: fixed;
+	margin-top: 0;
+	padding-top: 5%;
+	
+}
+#Section1 .col-sm p{
+	/* font-size: 120%; */
+    text-align: justify;
+    
+    margin-left: auto;
+    /* letter-spacing: 2px; */
+	color:#576574;
+	
+}
+#Section1 h5{
+	color:#576574;
+    letter-spacing: 2px;
+    
+}
+
+
+.SectionHdr{
+	text-align: center;
+    margin-top: 60px;
+	/* color:darkslategray; */
+
+}
+
+.Section-icons-medium {
+	font-size: 200%;
+    color:#5F27CD;
+}
+
+
+.PostList img{
+    float: left;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    width: 30%;
+    /* background-image: linear-gradient(rgba(252, 252, 252, 0.719), rgba(252, 246, 246, 0.945)), url("../images/pattern4.png"); */
+    /* background-position: center; */
+    /* background-size:cover; */
+    /* margin-bottom: 2px; */
+    /* background-attachment: fixed; */
+    
+}
+
+
+.PostList i,a, span{
+    font-size: 15px;
+}

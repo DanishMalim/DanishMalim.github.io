@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+    <meta charset="UTF-8">
+
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+
+
+
+
+    <!--Links ionicons minified stylesheet downloaded from ioicons website-->
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+
+
+    <!--NOte below links are for Bootstrap support-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!-- Below link is for theme file created on free theme builder website-->
+    <link rel="stylesheet" href="./vendors/css/theme.css">
+
+    <!--This is out custom style sheet usedand created by us-->
+    <link rel="stylesheet" href="./resources/css/style.css">
+
+
+    <!-- Third party sscript files linked to enabled for some javascript support-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</head>
+
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <!-- Main Landing page header-->
+    <header>
+
+        <!-- This is a inbuild class call jumbotron used for banners-->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid" style="margin-top: 10%; margin-left: 5%; width: auto;">
+                <h1>Banner Message here. </h1>
+                <p>Add some text here.</p>
+            </div>
+        </div>
+
+
+
+        <!-- Nav Bar code here built using bootstrap4-->
+        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-dark">
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="../resources/images/Dm3.png" height="50px" width="auto" class="d-inline-block align-top"
+                    alt="">
+            </a>
+
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i id="NavBarToggler" class="ion-navicon-round"></i>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="ion-android-home"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog"><i class="ion-ios-compose"></i>Blog</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="ion-document-text"></i>Cv</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="ion-android-mail"></i>Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <!-- <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button> -->
+                            <!-- <button class="btn btn-dark mt-auto ml-auto" type="submit"><i class="ion-search"
+                                    style="margin:0; padding:0; font-size: 120%;"></i></button> -->
+                            <button class="btn btn-dark  my-2 my-sm-0" type="submit"><i class="ion-search"
+                                    style="margin:0; padding:0; font-size: 120%;"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <body>
+
+        <!-- Content are added through thier own respective page-->
+        <!-- Uncomment below section if you want to add some landing page content (I have commented this
+        as I don't want it.-->
+        <div class="container">
+
+            {{ content }}
+
+        </div>
+
+
+    </body>
+    <!-- <footer class="site-footer">
+        {% if site.github.is_project_page %}
+        <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a>
+            is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        {% endif %}
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub
+                Pages</a>.</span>
+    </footer>
+ -->
+
+    </html>
