@@ -2,7 +2,7 @@
 layout: post
 categories: [Tutorial]
 tags: [sample]
-title: "New sample post"
+title: "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin."
 date: 2020-03-14
 description: This is to demonstrate sample description
 ---
