@@ -2,28 +2,55 @@
     font-size:20px; /* Can be changed later*
 } */
 
+
+.LandingPageBody{
+    background-image: linear-gradient(rgba(173, 169, 169, 0.5), rgba(24, 4, 4, 0.308)), url("../images/pattern3.png");
+    background-size:cover; 
+	background-position:centre;
+	background-attachment: fixed; 
+}
+
+.LandingPageContainer{
+    margin-top: 200px;
+    
+}
+
+
+.LandingPageContainer p{
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: justify;
+    color: #c8d6e5;
+}
+.LandingPageHeader {
+    letter-spacing: 1px;
+    color:white;
+}
+
+
 /* This will add image to complete banner tag*/
-.jumbotron{
+/* .jumbotron{
 	background-image: linear-gradient(rgba(173, 169, 169, 0.5), rgba(24, 4, 4, 0.308)), url("../images/pattern3.png");
-	background-size:cover; /* To reduce the the size of the image*/
-	background-position:centre; /*alignment of image*/
-	background-attachment: fixed;
-	height: 100vh;	
+	background-size:cover; 
+	background-position:centre;
+	background-attachment: fixed; */
+    /* height: 100vh;	 */
+    /* height: 250px;
 	margin-bottom: 0rem  !important; 
     margin-right: 0rem  !important; 
     color: whitesmoke;	
-}
+} */
 
 
-.jumbotron h1{
-
+/* .jumbotron h1{
     font-size: 50px;
+} */
 
 
-}
-.navbar{
-    background: linear-gradient(rgba(177, 176, 176, 0.103),rgba(0, 0, 0, 0.425));
-}
+/* .navbar{ */
+    /* background: linear-gradient(rgba(177, 176, 176, 0.103),rgba(0, 0, 0, 0.425)); */
+    /* background: transparent; */
+/* } */
 
 .navbar a{
 color: #C8D6E5 !important; 
@@ -39,6 +66,7 @@ margin-right: 30px;
     /* color:#00D2D3 !important;  */
     color:white !important; 
     /* color:orange!important;  */
+    transition: color 0.2s;
 }
 #NavBarToggler{
     color: #C8D6E5;
@@ -46,67 +74,3 @@ margin-right: 30px;
 }
 
 
-
-
-/*Section1 styling*/
-
-/* ------------------------------
-First section styling 
----------------------------------
-*/
-#Section1 {
-	/* background-image: linear-gradient(rgba(252, 252, 252, 0.719), rgba(252, 246, 246, 0.945)),url("../images/pattern4.png");	 */
-	background-size:cover; /* To reduce the the size of the image*/
-	background-position:center; /*alignment of image*/
-	background-attachment: fixed;
-	margin-top: 0;
-	padding-top: 5%;
-	
-}
-#Section1 .col-sm p{
-	/* font-size: 120%; */
-    text-align: justify;
-    
-    margin-left: auto;
-    /* letter-spacing: 2px; */
-	color:#576574;
-	
-}
-#Section1 h5{
-	color:#576574;
-    letter-spacing: 2px;
-    
-}
-
-
-.SectionHdr{
-	text-align: center;
-    margin-top: 60px;
-	/* color:darkslategray; */
-
-}
-
-.Section-icons-medium {
-	font-size: 200%;
-    color:#5F27CD;
-}
-
-
-.PostList img{
-    float: left;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    width: 30%;
-    /* background-image: linear-gradient(rgba(252, 252, 252, 0.719), rgba(252, 246, 246, 0.945)), url("../images/pattern4.png"); */
-    /* background-position: center; */
-    /* background-size:cover; */
-    /* margin-bottom: 2px; */
-    /* background-attachment: fixed; */
-    
-}
-
-
-.PostList i,a, span{
-    font-size: 15px;
-}

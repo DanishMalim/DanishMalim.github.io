@@ -1,0 +1,113 @@
+.BlogMainContainer{
+    font-size:20px; /* Can be changed later*/
+}
+
+/*Belo Rule adds margin between main container ie Starting point of blog page adn fixed nav bar on top*/
+.BlogMainContainer{
+    margin-top: 100px;
+}
+
+/* Nav Bar settings */
+.navbar{
+    /* background: linear-gradient(rgba(177, 176, 176, 0.103),rgba(0, 0, 0, 0.425)); */
+    background-color:white;
+    /* background-color: transparent;     */
+}
+
+.navbar a{
+color: #5F27CD !important; 
+font-size: 120%;
+margin-right: 30px;
+
+}
+.navbar i{
+    margin-right: 5px;
+}
+
+.navbar li a:hover{
+    /* color:#00D2D3 !important;  */
+    color:#C8D6E5 !important; 
+    transition: color 0.2s;
+    /* color:orange!important;  */
+}
+#NavBarToggler{
+    color: #C8D6E5;
+    font-size: 120%;
+}
+
+
+/* Below is styling for paginator links for post*/
+.paginator_links ul,li{
+    display: inline; list-style: none;
+    /* margin: 2px; */
+    
+}
+.paginator_links ul{    
+    padding-left: 0;
+}
+
+.paginator_links span{    
+    /* font-size: 0.8em; */
+    font-size: 60%;
+}
+
+.paginator_links a{    
+    /* font-size: 0.8em; */
+    font-size: 60%;
+}
+.paginator_links .label{    
+    /* font-size: 0.8em; */
+    font-size: 80%;
+}
+
+
+/*Styling for Posts listed in blog home page*/
+.PostList{
+    margin-top:60px;
+}
+.PostList .Post-Hdr{
+    /* font-size: 15px; */
+    font-size: 90%;
+
+}
+.PostList .Post-Metadata{
+    /* font-size: 15px; */
+    font-size: 80%;
+
+}
+.PostList .Post-ReadMore{
+    /* font-size: 0.8em; */
+    font-size: 70%;
+    
+}
+
+
+/*Footer styling*/
+footer{
+
+    background-image: linear-gradient(rgba(252, 252, 252, 0.719), rgba(252, 246, 246, 0.945)), url("/resources/images/Circles1.png");
+    background-size:cover; 
+	background-position:center;
+    background-attachment: fixed; 
+    size: 100vh;
+}
+
+
+
+
+/* Styling for Postdetails card*/
+
+.PostDetails .AuthDetails{
+    font-size: 0.8em;
+}
+
+.PostDetails .SecondRow{
+    font-size: 0.9em;
+}
+
+.PostDetails .ThirdRow{
+    font-size: 0.9em;
+}
+.PostDetails .FourthRow{
+    font-size: 0.9em;
+}
