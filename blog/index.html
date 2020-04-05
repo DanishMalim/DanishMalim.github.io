@@ -3,25 +3,13 @@ layout: BlogLayout
 title: danishMalim.github.io
 ---
 <div class="BlogMainContainer">
-    <h1 class="text-primary my-4">All posts</h1>
-
-    <!-- This For for loop will list down all the posts that are present in _posts dir -->
-    <!-- {% for post in paginator.posts %}
-    <h4>
-        <i class="fa fa-pencil" aria-hidden="true"></i>
-        <a href="{{ post.url }}">{{ post.title }}</a></h4>
-    <p class="author">
-        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-    </p>
-    <div class="content">
-    {{ post.content }}
-  </div> 
-    {% endfor %} -->
-
+    <section class="Sect_Hdr">
+        <h1 class="text-primary my-4">All posts</h1>
+    </section>
+    
 
     {% for post in paginator.posts %}
-    <!--Sample card depicting post but image section is removed-->
-    <section class="PostList">
+    <section class="Sect_PostList">
         <!-- <img src="./resources/images/blogImage.png" class="img-responsive"> -->
         <div class="container my-5 Main-container">
             <div class="row ">
@@ -31,11 +19,11 @@ title: danishMalim.github.io
 
 
                 <div class="col-sm-12">
-               
-                        <h5 class="text-primary Post-Hdr"><i class="ion-edit mr-2"></i>
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                        </h5>
-                    
+
+                    <h5 class="text-primary Post-Hdr"><i class="ion-edit mr-2"></i>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </h5>
+
                     <div class="text-muted my-3 Post-Metadata">
                         <div class="row ">
                             <!-- <div class="col-auto"><i class="ion-paperclip mr-1"></i> <span>Category:</span>
@@ -45,7 +33,8 @@ title: danishMalim.github.io
                                 <a href="">Guide,</a>
                             </div> -->
                             <div class="col-auto">
-                                <i class="ion-android-calendar mr-1"></i><span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+                                <i class="ion-android-calendar mr-1"></i><span
+                                    class="date">{{ post.date | date: '%B %d, %Y' }}</span>
                                 <!-- <i class="ion-android-time ml-sm-3 "></i> 1 min read  -->
                                 <i class="ion-compose ml-2"></i>
                                 <span> Written by :<a href="">Author Name</a></span>
@@ -60,8 +49,6 @@ title: danishMalim.github.io
                         </div> -->
                     </div>
 
-
-
                     <!-- <p class="text-justify my-3">
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
                         sollicitudin.
@@ -70,8 +57,7 @@ title: danishMalim.github.io
                         odio,                     
                     </p> -->
 
-                    <a href="{{ post.url }}" class="btn btn-outline-primary mt-auto ml-auto Post-ReadMore" >Read more</a>
-                    <!-- <a href="#" class="btn btn-outline-primary mt-auto ml-auto">Read more</a> -->
+                    <a href="{{ post.url }}" class="btn btn-outline-primary mt-auto ml-auto Post-ReadMore">Read post</a>            
                 </div>
             </div>
         </div>
@@ -82,72 +68,38 @@ title: danishMalim.github.io
 
 
 
-    <!-- Liquid paginator inside bootstrap  (Not Used currently-->
-    <!-- {% if paginator.total_pages > 1 %}
-    <nav aria-label="Page navigation " >
-        <ul class="pagination justify-content-center">
+    <section class="Sect_Paginator">
+        <div class="container" style="margin-bottom: 3em; margin-top: 3em;">
+            <div class="row">
 
+                <div class="col-sm-8">
+                    <!-- Pagination links -->
+                    <div class="paginator_links">
+                        <ul>
+                            {% if paginator.previous_page %}
+                            <li><a href="{{ paginator.previous_page_path }}" class="btn btn-outline-primary">&laquo;
+                                    Prev</a></li>
+                            {% else %}
+                            <li><span class="btn btn-primary disabled auto">Prev</span></li>
+                            {% endif %}
 
-        {% if paginator.previous_page %}
-            <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;Previous</a></li>
-        {% else %}
-            <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">&laquo;Previous</a>
-            </li>
-        {% endif %}
-             
+                            <li class="label label-default">Page: {{ paginator.page }} of {{ paginator.total_pages }}
+                            </li>
 
-        {% for page in (1..paginator.total_pages)%}
-            {% if page == paginator.page %}
-
-            
-                <li class="page-item"><a class="page-link">{{ paginator.page }}Current </a></li>
-                
-            {% elsif page == 1 %}
-                <li class="page-item"><a class="page-link" href="/blog">{{page }}</a></li>
-            {% else %}
-                <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-            {% endif %}
-        {% endfor %}
-
-          {% if paginator.next_page %}          
-          <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" >Next&raquo;</a></li>
-          {% else %}
-          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Next&raquo;</a></li>
-          {% endif %}
-
-        </ul>
-      </nav>
-      {% endif %} -->
-
-
-    <div class="container" style="margin-bottom: 3em; margin-top: 3em;">
-        <div class="row">
-           
-            <div class="col-sm-8">
-                <!-- Pagination links -->
-                <div class="paginator_links">
-                    <ul >
-                        {% if paginator.previous_page %}
-                        <li><a href="{{ paginator.previous_page_path }}" class="btn btn-outline-primary">&laquo;
-                                Prev</a></li>
-                        {% else %}
-                        <li><span class="btn btn-primary disabled auto">Prev</span></li>
-                        {% endif %}
-
-                        <li class="label label-default">Page: {{ paginator.page }} of {{ paginator.total_pages }}</li>
-
-                        {% if paginator.next_page %}
-                        <li><a href="{{ paginator.next_page_path }}" class="btn btn-outline-primary">Next &raquo;</a>
-                        </li>
-                        {% else %}
-                        <li><span class="btn btn-primary disabled">Next </span></li>
-                        {% endif %}
-                    </ul>
+                            {% if paginator.next_page %}
+                            <li><a href="{{ paginator.next_page_path }}" class="btn btn-outline-primary">Next
+                                    &raquo;</a>
+                            </li>
+                            {% else %}
+                            <li><span class="btn btn-primary disabled">Next </span></li>
+                            {% endif %}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 
 
 

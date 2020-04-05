@@ -62,20 +62,20 @@ margin-right: 30px;
 
 
 /*Styling for Posts listed in blog home page*/
-.PostList{
+.Sect_PostList{
     margin-top:60px;
 }
-.PostList .Post-Hdr{
+.Sect_PostList .Post-Hdr{
     /* font-size: 15px; */
     font-size: 90%;
 
 }
-.PostList .Post-Metadata{
+.Sect_PostList .Post-Metadata{
     /* font-size: 15px; */
     font-size: 80%;
 
 }
-.PostList .Post-ReadMore{
+.Sect_PostList .Post-ReadMore{
     /* font-size: 0.8em; */
     font-size: 70%;
     
@@ -97,17 +97,29 @@ footer{
 
 /* Styling for Postdetails card*/
 
-.PostDetails .AuthDetails{
+.Sect_PostDetails .AuthDetails{
     font-size: 0.8em;
 }
 
-.PostDetails .SecondRow{
+.Sect_PostDetails .SecondRow{
     font-size: 0.9em;
 }
 
-.PostDetails .ThirdRow{
+.Sect_PostDetails .ThirdRow{
     font-size: 0.9em;
 }
-.PostDetails .FourthRow{
+.Sect_PostDetails .FourthRow{
     font-size: 0.9em;
+}
+
+
+
+/*Styling for Related post section in Postpage*/
+.Sect_RelatedPost{
+    background-image:linear-gradient(rgba(252, 252, 252, 0.719), rgba(252, 246, 246, 0.945)), url('/resources/images/blogImage.png'); 
+    background-position: center; 
+    background-attachment: fixed;
+    background-size:cover; 
+    padding-top: 40px; 
+    padding-bottom: 40px;
 }
