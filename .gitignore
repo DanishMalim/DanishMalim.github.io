@@ -1,5 +1,8 @@
 _site/
 *~
 *.swp
+<<<<<<< HEAD
 
 Gemfile.lock
+=======
+>>>>>>> 754dd7d8b71cf5a445c0b17b4e16cfb37537985f

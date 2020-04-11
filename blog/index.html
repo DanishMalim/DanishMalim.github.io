@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 layout: BlogHomeLayout
 title: All posts
 ---
@@ -71,3 +72,112 @@ title: All posts
       </div>
   </div>
 </section>
+=======
+layout: BlogLayout
+title: danishMalim.github.io
+---
+<div class="BlogMainContainer">
+    <section class="Sect_Hdr">
+        <h1 class="text-primary my-4">All posts</h1>
+    </section>
+    
+
+    {% for post in paginator.posts %}
+    <section class="Sect_PostList">
+        <!-- <img src="./resources/images/blogImage.png" class="img-responsive"> -->
+        <div class="container my-5 Main-container">
+            <div class="row ">
+                <!-- <div class="col-sm-3">
+                    <img class="img-responsive" src="./resources/images/blogImage.png" alt="Generic placeholder image">
+                </div> -->
+
+
+                <div class="col-sm-12">
+
+                    <h5 class="text-primary Post-Hdr"><i class="ion-edit mr-2"></i>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </h5>
+
+                    <div class="text-muted my-3 Post-Metadata">
+                        <div class="row ">
+                            <!-- <div class="col-auto"><i class="ion-paperclip mr-1"></i> <span>Category:</span>
+                                <a href="">Tutorials,</a>
+                                <a href="">Guide,</a>
+                                <a href="">Guide,</a>
+                                <a href="">Guide,</a>
+                            </div> -->
+                            <div class="col-auto">
+                                <i class="ion-android-calendar mr-1"></i><span
+                                    class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+                                <!-- <i class="ion-android-time ml-sm-3 "></i> 1 min read  -->
+                                <i class="ion-compose ml-2"></i>
+                                <span> Written by :<a href="">Author Name</a></span>
+                            </div>
+                        </div>
+                        <!-- <div class="row Post-Excerpts">
+                            <div class="col-auto"><i class="ion-pound mr-1"></i><span> Tags:</span>
+                                <a href="">Tutorials,</a>
+                                <a href="">Guide</a>
+
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- <p class="text-justify my-3">
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                        sollicitudin.
+                        Cras
+                        purus
+                        odio,                     
+                    </p> -->
+
+                    <a href="{{ post.url }}" class="btn btn-outline-primary mt-auto ml-auto Post-ReadMore">Read post</a>            
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+
+
+
+
+
+    <section class="Sect_Paginator">
+        <div class="container" style="margin-bottom: 3em; margin-top: 3em;">
+            <div class="row">
+
+                <div class="col-sm-8">
+                    <!-- Pagination links -->
+                    <div class="paginator_links">
+                        <ul>
+                            {% if paginator.previous_page %}
+                            <li><a href="{{ paginator.previous_page_path }}" class="btn btn-outline-primary">&laquo;
+                                    Prev</a></li>
+                            {% else %}
+                            <li><span class="btn btn-primary disabled auto">Prev</span></li>
+                            {% endif %}
+
+                            <li class="label label-default">Page: {{ paginator.page }} of {{ paginator.total_pages }}
+                            </li>
+
+                            {% if paginator.next_page %}
+                            <li><a href="{{ paginator.next_page_path }}" class="btn btn-outline-primary">Next
+                                    &raquo;</a>
+                            </li>
+                            {% else %}
+                            <li><span class="btn btn-primary disabled">Next </span></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+</div>
+<!--End of main container of this page-->
+>>>>>>> 754dd7d8b71cf5a445c0b17b4e16cfb37537985f

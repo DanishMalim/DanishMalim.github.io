@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # theme: jekyll-theme-cayman
 #permalink: /blog/:year/:month/:day/:title
 paginate: 5
@@ -16,3 +17,10 @@ kramdown:
   auto_ids: true
   syntax_highlighter: rouge
 
+=======
+
+#permalink: /blog/:year/:month/:day/:title
+paginate: 5
+paginate_path: "/blog/page:num/"
+plugins: [jekyll-paginate, jekyll-seo-tag]
+>>>>>>> 754dd7d8b71cf5a445c0b17b4e16cfb37537985f
