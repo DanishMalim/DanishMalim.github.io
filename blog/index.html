@@ -1,0 +1,73 @@
+---
+layout: BlogHomeLayout
+title: All posts
+---
+
+<section class="container Sect_PostList">
+  {% for post in paginator.posts %}
+  <div class="container Post-Container mt-5">
+    <div class="row Post-Hdr ">
+      <div class="col-auto">
+        <h5 class="text-primary Post-Hdr"><i class="ion-edit mr-2"></i><a href="{{ post.url }}">{{ post.title }}</a>
+        </h5>
+      </div>
+    </div>
+    <div class="row Post-Cat mt-2 text-dark">
+      <div class="col-auto">
+        <i class="ion-android-folder-open mr-1"></i> <span>Category:</span>
+        <a href="">Tutorials,</a>
+        <a href="">Guide,</a>
+        <a href="">Guide,</a>
+        <a href="">Guide,</a>
+      </div>
+    </div>
+    <div class="row Post-MetaData mt-2 text-dark">
+      <div class="col-auto">
+        <i class="ion-android-calendar mr-2"></i><span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+      </div>
+      <div class="col-auto">
+        <i class="ion-compose mr-1"></i><span> Written by :<a href="">Author Name</a></span>
+      </div>
+    </div>
+    <div class="row Post-ReadMore">
+      <div class="col-auto mt-3">
+        <a href="{{ post.url }}" class="btn btn-outline-primary mt-auto ">Read post</a>
+      </div>
+
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+
+<section class="container Sect_Paginator mt-5">
+  <hr>
+  <div class="container" style="margin-bottom: 3em; margin-top: 3em;">
+      <div class="row">
+          <div class="col-lg-4 offset-lg-8">
+              <!-- Pagination links -->
+              <div class="paginator_links">
+                  <ul>
+                      {% if paginator.previous_page %}
+                      <li><a href="{{ paginator.previous_page_path }}" class="btn btn-outline-primary">&laquo;
+                              Prev</a></li>
+                      {% else %}
+                      <li><span class="btn btn-primary disabled auto">Prev</span></li>
+                      {% endif %}
+
+                      <li class="label label-default">Page: {{ paginator.page }} of {{ paginator.total_pages }}
+                      </li>
+
+                      {% if paginator.next_page %}
+                      <li><a href="{{ paginator.next_page_path }}" class="btn btn-outline-primary">Next
+                              &raquo;</a>
+                      </li>
+                      {% else %}
+                      <li><span class="btn btn-primary disabled">Next </span></li>
+                      {% endif %}
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

@@ -1,0 +1,174 @@
+/**********************************
+Styling for all the fonts in project
+*/
+* html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px !important;
+}
+
+
+
+
+/**********************************
+Nav bar stylings
+*/
+/* .navbar{  */
+    /* background: linear-gradient(rgba(177, 176, 176, 0.103),rgba(0, 0, 0, 0.425)); */
+    /* background: transparent; */
+    
+/* } */
+.navbar a{
+color:#5F27CD !important; 
+font-size: 100%;
+margin-right: 30px;
+}
+.navbar i{
+    margin-right: 5px;
+}
+
+.navbar li a:hover{
+    /* color:#00D2D3 !important;  */
+    color:#ff6b6b !important; 
+    /* color:orange!important;  */
+    transition: color 0.5s;
+    font-weight: 700;
+    
+}
+#NavBarToggler{
+    color: #C8D6E5;
+    font-size: 120%;
+}
+.navbar img{
+padding-left: 10% ;
+height:50px;
+width:auto;
+}
+.navbar .ion-search {
+    margin:0;
+    padding:0;
+    font-size: 120%;
+}
+
+.navbar{
+    background-color: white;
+    /* border-bottom: solid 2px; */
+    /* webkit-box-shadow: 0 8px 6px -6px black; */
+    -moz-box-shadow: 0 8px 6px -6px grey;
+    box-shadow: 0 8px 6px -6px grey;
+}
+/* Below issue can be taken care using media queries*/
+/* .navbar .navbar-nav .nav-item{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    
+} */
+
+/* .navbar .navbar-nav .navBarList{
+    border-radius: 50%;
+} */
+
+
+
+/**********************************
+ Styling for Default content section
+*/
+.Sect_DefaultContent{
+    padding-top: 7em;
+}
+
+/**********************************
+ Styling for contacts section
+*/
+.Sect_ContactsAndShare{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.287) ,rgba(18, 14, 75, 0.616)), url("/resources/images/Pattern2.png");
+background-size:cover; 
+background-position:center;
+background-attachment: fixed; 
+size: 100vh;
+margin:0;
+padding:0;
+}
+
+
+/*******************************************************
+ Contact section on default layout
+*/
+.Sect_ContactsAndShare .card-body i{
+    font-size: 50px;
+    color:white;
+    /* color:violet; */
+    /* color:#5F27CD; */
+    /* text-align: center; */
+}
+.Sect_ContactsAndShare .card-body i:hover{
+    /* color:#ff6b6b ; */
+    color:#00d2d3 ;
+    transition: color 0.5s;
+}
+.Sect_ContactsAndShare .card-body p{
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    
+}
+
+.Sect_ContactsAndShare .row{
+    padding-top: 50px;
+    /* padding-bottom: 50px; */
+}
+.Sect_ContactsAndShare .card-header{
+    color:white;
+}
+
+.Sect_ContactsAndShare .Site_info span{
+    color: white;
+}
+.Sect_ContactsAndShare .Site_info a{
+    color: pink;
+}
+
+
+/*******************************************************
+Styling for Related post section in Postpage
+*/
+.Sect_RelatedPost{
+    background-image:linear-gradient(rgba(252, 252, 252, 0.719), rgba(252, 246, 246, 0.945)), url('/resources/thumbs/blogImage.png'); 
+    background-position: center; 
+    background-attachment: fixed;
+    background-size:cover; 
+    padding-top: 40px; 
+    padding-bottom: 40px;
+}
+
+
+/*******************************************************
+Styling for Post metadata card on each post page
+*/
+.Sect_PostMetaData{
+    margin-top: 20px; margin-bottom: 40px;
+    font-size: 90%;
+    
+    
+ }
+ .Sect_PostMetaData .PostMetaData_MainRow{
+    box-shadow: 5px 5px 6px grey;
+    
+ }
+
+.Sect_PostMetaData img{
+width: 60px; border-radius: 50%;  padding-right: 0; margin-right:0;
+ }
+
+
+ .Sect_PostMetaData .PostMetaData_Avatar{
+ text-align:center; padding-right:0;
+ }
+
+
+
+/*******************************************************
+Styling for Post content on each post page
+*/
+ .Sect_PostContent{
+     margin-bottom: 3em;
+ }
